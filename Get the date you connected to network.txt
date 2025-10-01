@@ -1,0 +1,9 @@
+
+
+
+
+$networkName = "HITRONA7809"
+Get-WinEvent -LogName Microsoft-Windows-WLAN-AutoConfig/Operational | Where-Object { $_.Id -eq 8001 -and $_.Message -match $networkName } | Format-Table -Property TimeCreated, Message
+
+$networkName = "ICMManila"
+Get-WinEvent -LogName Microsoft-Windows-WLAN-AutoConfig/Operational | Where-Object { $_.Id -eq 8001 -and $_.Message -match $networkName } | Format-Table -Property TimeCreated, Message
